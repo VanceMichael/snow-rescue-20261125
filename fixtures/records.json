@@ -51,21 +51,21 @@
   "roads": [
     {
       "id": "R-1",
-      "validFrom": "STOP-A",
       "to": "SHELTER-A",
-      "minutes": 30
+      "minutes": 30,
+      "from": "STOP-A"
     },
     {
       "id": "R-2",
-      "validFrom": "SHELTER-A",
       "to": "STOP-A",
-      "minutes": 35
+      "minutes": 35,
+      "from": "SHELTER-A"
     },
     {
       "id": "R-3",
-      "validFrom": "STOP-A",
       "to": "SHELTER-B",
-      "minutes": 50
+      "minutes": 50,
+      "from": "STOP-A"
     }
   ],
   "vehicles": [
