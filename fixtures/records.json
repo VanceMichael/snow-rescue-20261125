@@ -1,0 +1,171 @@
+{
+  "passengers": [
+    {
+      "id": "PA-1",
+      "ticket": "TK-1",
+      "party": "FAM-1",
+      "needs": [
+        "wheelchair"
+      ]
+    },
+    {
+      "id": "PA-2",
+      "ticket": "TK-2",
+      "party": "FAM-1",
+      "needs": [
+        "guardian-companion"
+      ]
+    },
+    {
+      "id": "PA-3",
+      "ticket": "TK-3",
+      "party": null,
+      "needs": []
+    }
+  ],
+  "tickets": [
+    {
+      "id": "TK-1",
+      "operator": "OP-A",
+      "legs": [
+        "S1",
+        "S2"
+      ]
+    },
+    {
+      "id": "TK-2",
+      "operator": "OP-A",
+      "legs": [
+        "S1",
+        "S2"
+      ]
+    },
+    {
+      "id": "TK-3",
+      "operator": "OP-A",
+      "legs": [
+        "S1"
+      ]
+    }
+  ],
+  "roads": [
+    {
+      "id": "R-1",
+      "validFrom": "STOP-A",
+      "to": "SHELTER-A",
+      "minutes": 30
+    },
+    {
+      "id": "R-2",
+      "validFrom": "SHELTER-A",
+      "to": "STOP-A",
+      "minutes": 35
+    },
+    {
+      "id": "R-3",
+      "validFrom": "STOP-A",
+      "to": "SHELTER-B",
+      "minutes": 50
+    }
+  ],
+  "vehicles": [
+    {
+      "id": "BUS-A",
+      "operator": "OP-B",
+      "seats": 6,
+      "wheelchairSlots": 1
+    },
+    {
+      "id": "BUS-B",
+      "operator": "OP-B",
+      "seats": 4,
+      "wheelchairSlots": 0
+    }
+  ],
+  "shelters": [
+    {
+      "id": "SHELTER-A",
+      "capacity": 4,
+      "accessibleBeds": 1,
+      "lastArrival": "2026-11-27T16:00:00Z"
+    },
+    {
+      "id": "SHELTER-B",
+      "capacity": 8,
+      "accessibleBeds": 0,
+      "lastArrival": "2026-11-27T18:00:00Z"
+    }
+  ],
+  "restrictionInputs": [
+    {
+      "id": "CLOSE-1",
+      "road": "R-1",
+      "vehicleTypes": [
+        "coach"
+      ],
+      "start": "2026-11-27T10:00:00Z",
+      "end": "2026-11-27T14:00:00Z"
+    }
+  ],
+  "actors": [
+    {
+      "id": "dispatch",
+      "role": "dispatcher"
+    },
+    {
+      "id": "station-a",
+      "role": "station",
+      "station": "STOP-A"
+    },
+    {
+      "id": "shelter-a",
+      "role": "shelter",
+      "shelter": "SHELTER-A"
+    },
+    {
+      "id": "operator-a",
+      "role": "operator",
+      "operator": "OP-A"
+    }
+  ],
+  "sourceChanges": [
+    {
+      "id": "PARTY-REQUEST",
+      "party": "FAM-1",
+      "passengers": [
+        "PA-1",
+        "PA-2"
+      ],
+      "splitConsent": false
+    },
+    {
+      "id": "S1-FULFILLED",
+      "passengers": [
+        "PA-1",
+        "PA-2"
+      ],
+      "leg": "S1",
+      "operator": "OP-A"
+    },
+    {
+      "id": "RESTRICTION-2",
+      "road": "R-3",
+      "vehicleTypes": [
+        "coach"
+      ],
+      "start": "2026-11-27T12:00:00Z",
+      "end": "2026-11-27T18:00:00Z"
+    },
+    {
+      "id": "SHELTER-STOP",
+      "shelter": "SHELTER-A",
+      "accepting": false,
+      "reason": "接收设施临时故障"
+    },
+    {
+      "id": "WISH-1",
+      "passenger": "PA-3",
+      "wish": "cancel-unfulfilled"
+    }
+  ]
+}

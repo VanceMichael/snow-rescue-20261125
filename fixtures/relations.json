@@ -1,0 +1,14 @@
+[
+  {
+    "table": "passengers",
+    "field": "ticket",
+    "target": "tickets",
+    "nullable": false
+  },
+  {
+    "table": "restrictionInputs",
+    "field": "road",
+    "target": "roads",
+    "nullable": false
+  }
+]

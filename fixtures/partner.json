@@ -1,0 +1,14 @@
+{
+  "name": "接续承运台",
+  "path": "/coach/dispatches",
+  "lookup": "/coach/dispatches/",
+  "id": "dispatchNo",
+  "group": "passengers",
+  "key": "Dispatch-Key",
+  "modes": [
+    "accepted",
+    "rejected",
+    "accepted_disconnect",
+    "pending"
+  ]
+}
